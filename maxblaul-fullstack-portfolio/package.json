@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "src/main.jsx",  
+  "files": ["src", "dist"],  
   "scripts": {
     "dev": "vite",
     "start": "vite",
@@ -27,5 +29,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "vite": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"  
   }
 }

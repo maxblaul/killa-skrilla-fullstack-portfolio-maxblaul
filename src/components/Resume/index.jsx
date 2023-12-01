@@ -10,7 +10,7 @@ function Resume() {
         </>
         <a
           className="button is-primary"
-          href={process.env.PUBLIC_URL + "/Max_Blaul_Resume_June_2023.pdf"}  // Corrected the file path
+          href= "%PUBLIC_URL%/Max_Blaul_Resume_June_2023.pdf" // Corrected the file path
           target="_blank"
           rel="noopener noreferrer"  // Include both noopener and noreferrer for security
         >
@@ -22,7 +22,7 @@ function Resume() {
       </div>
       <div className="column">
         <p className="content is-medium">Skills</p>  {/* Corrected the class name */}
-        <hr />
+        {/* <hr /> */}
         <ul>
           <li>HTML, CSS, JavaScript</li>
           <li>API, React, Node.js</li>

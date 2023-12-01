@@ -81,3 +81,64 @@ function Contact() {
 }
 
 export default Contact;
+// import { useState } from 'react';
+// import { FormGroup, Label, Input, FormFeedback } from 'reactstrap';
+
+// function TextInput({ label, placeholder, type, validation }) {
+//   const [inputValue, setInputValue] = useState('');
+//   const [inputOk, setInputOk] = useState(false);
+//   const [blur, setBlur] = useState(false);
+
+//   const handleInputChange = (event) => {
+//     const value = event.target.value;
+//     setInputValue(value);
+//     setInputOk(validation(value));
+//   };
+
+//   const handleInputBlur = () => {
+//     setBlur(true);
+//   };
+
+//   return (
+//     <FormGroup className="text-start">
+//       <Label for={`contact${label}`}>
+//         {label}
+//       </Label>
+//       <Input
+//         className={`${blur && (inputOk ? 'is-valid' : 'is-invalid')}`}
+//         id={`contact${label}`}
+//         name={`contact${label}`}
+//         placeholder={placeholder}
+//         value={inputValue}
+//         type={type}
+//         onChange={handleInputChange}
+//         onBlur={handleInputBlur}
+//       />
+//       <FormFeedback>
+//         {blur && !inputOk && `Uh oh! You left this field blank. Please fill it in.`}
+//         {blur && inputOk && type === 'email' && 'Please type a valid email address.'}
+//       </FormFeedback>
+//     </FormGroup>
+//   );
+// }
+
+// // Usage
+// export function ContactForm() {
+//   return (
+//     <div>
+//       <TextInput label="Name" placeholder="Name" type="text" validation={(value) => value.length > 0} />
+//       <TextInput
+//         label="Message"
+//         placeholder="Message for Max"
+//         type="textarea"
+//         validation={(value) => value.length > 0}
+//       />
+//       <TextInput
+//         label="Email"
+//         placeholder="email@example.com"
+//         type="email"
+//         validation={(value) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)}
+//       />
+//     </div>
+//   );
+// }

@@ -9,8 +9,9 @@ function Footer() {
           <a href="https://github.com/maxblaul" target="_blank" rel="noopener noreferrer">
             Max Blaul
           </a>
-          .
+          {/* <>
           <hr />
+          </> */}
           <a href="https://www.linkedin.com/in/maxwell-blaul-187381144/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>{" "}

@@ -5,8 +5,9 @@ function Resume() {
     <div className="columns">
       <div className="column">
         <p className="content is-medium"> Resume</p>
-        <hr />
-
+        <>
+          <hr />
+        </>
         <a
           className="button is-primary"
           href={process.env.PUBLIC_URL + "/Max_Blaul_Resume_June_2023.pdf"}  // Corrected the file path

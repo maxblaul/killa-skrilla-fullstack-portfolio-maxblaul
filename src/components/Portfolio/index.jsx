@@ -44,22 +44,22 @@ const projects = [
       repo: "https://github.com/maxblaul/Work-day-scheduler-maxblaul",
       live: "https://maxblaul.github.io/module-5-challenge/",
     },
-    {
-      id: 5,
-      title: "",
-      image: "",
-      description: "",
-      repo: "",
-      live: "",
-    },
-    {
-      id: 6,
-      title: "",
-      image: "",
-      description: "",
-      repo: "",
-      live: "",
-    },
+    // {
+    //   id: 5,
+    //   title: "",
+    //   image: "",
+    //   description: "",
+    //   repo: "",
+    //   live: "",
+    // },
+    // {
+    //   id: 6,
+    //   title: "",
+    //   image: "",
+    //   description: "",
+    //   repo: "",
+    //   live: "",
+    // },
   ];
   
 

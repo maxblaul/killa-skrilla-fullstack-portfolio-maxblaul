@@ -22,13 +22,14 @@ This is a portfolio webpage for all of my fullstack web development projects. It
 Clone it from the repo. Run the command NPM I in the terminal. 
 
 ## Deployed Link
+https://main--euphonious-cendol-c97e0c.netlify.app/
 
 ## Repository
 
 https://github.com/maxblaul/maxblaul-fullstack-portfolio
 
 ## Screenshot
-
+![Screenshot](<Screenshot (29).png>)
 ## Resources
 
 Class notes, chatgpt, Googled some portfolio examples for layout and structural ideas. All the information is provided by me. 

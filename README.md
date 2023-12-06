@@ -29,7 +29,7 @@ https://main--euphonious-cendol-c97e0c.netlify.app/
 https://github.com/maxblaul/maxblaul-fullstack-portfolio
 
 ## Screenshot
-![Screenshot](<Screenshot (29).png>)
+![Screenshot](<Screenshot (36).png>)
 ## Resources
 
-Class notes, chatgpt, Googled some portfolio examples for layout and structural ideas. All the information is provided by me. 
+Class notes, chatgpt, Googled some portfolio examples for layout and structural ideas. All the information is provided by me. Bulma was also used. I attemted to use Nodemailer for the contact section but it's still not working quite right. 

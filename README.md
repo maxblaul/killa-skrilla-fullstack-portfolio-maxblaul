@@ -5,12 +5,12 @@ Max Blaul's awesome, fantastic, marvelous, magnetic, super-sonic... portfolio
 
 ## Contents
 
-* [Description]
-* [Installation]
-* [Deployed-Link] 
-* [Repository]
-* [Screenshot]
-* [Resources]
+* [Description](#description)
+* [Installation](#installation)
+* [Deployed-Link](#deployed-link) 
+* [Repository](#repository)
+* [Screenshot](#screenshot)
+* [Resources](#resources)
 
 ## Description
 

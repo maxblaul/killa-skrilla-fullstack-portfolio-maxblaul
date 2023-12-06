@@ -1,4 +1,6 @@
 import React from "react";
+import MaxResume from "../../public/Resume.pdf"
+
 
 function Resume() {
   return (
@@ -10,7 +12,7 @@ function Resume() {
         </>
         <a
           className="button is-primary"
-          href= "%PUBLIC_URL%/Max_Blaul_Resume_June_2023.pdf" // Corrected the file path
+          href= {MaxResume} // Corrected the file path
           target="_blank"
           rel="noopener noreferrer"  // Include both noopener and noreferrer for security
         >

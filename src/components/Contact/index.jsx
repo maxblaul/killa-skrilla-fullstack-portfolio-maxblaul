@@ -1,84 +1,119 @@
 import React, { useState } from 'react';
-import { useForm } from '@formspree/react';
-import { validateEmail } from '../../../utils/helpers';
-
-// import 'dotenv/config';
 
 function Contact() {
-  // const [state, handleSubmit] = useForm(process.env.REACT_APP_FORM_ID);
-
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-  const [errorMessage, setErrorMessage] = useState('');
-  const { name, email, message } = formState;
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
   const handleChange = (e) => {
-    if (e.target.name === 'email') {
-      const isValid = validateEmail(e.target.value);
-      if (!isValid) {
-        setErrorMessage(`A valid email is required.`);
-      } else {
-        setErrorMessage('');
-      }
-    } else {
-      if (!e.target.value.trim()) {
-        setErrorMessage(`A ${e.target.name} is required.`);
-      } else {
-        setErrorMessage('');
-      }
-    }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    if (!errorMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log('Handle Form', formState);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:3001/#contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error('Error sending email:', error);
     }
   };
 
-  if (state.succeeded) {
-    return (
-      <div>
-        <p>Thank you for your message, I will get back to you ASAP!</p>
-        <button className="button is-medium is-primary is-half m-6" onClick={() => window.open("/#contact")}>
-          Back to About
-        </button>
-      </div>
-    );
-  }
-
   return (
     <div>
-      <p className="content is-medium">Contact Me</p>
-      <hr />
-      <form id="contact-form" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="field">
-          <label className="label" htmlFor="name">
-            Name
-          </label>
-          <input className="input" type="text" name="name" defaultValue={name} onBlur={handleChange} />
-        </div>
-        <div className="field">
-          <label className="label" htmlFor="email">
-            Email Address
-          </label>
-          <input className="input" type="email" name="email" defaultValue={email} onBlur={handleChange} />
-        </div>
-        <div className="field">
-          <label className="label" htmlFor="message">
-            Message
-          </label>
-          <textarea className="textarea" name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-        </div>
-        {errorMessage && (
-          <div>
-            <p className="is-danger">{errorMessage}</p>
+          <label className="label">Name</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              placeholder="Text input"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
           </div>
-        )}
-        <button className="button is-medium is-primary is-fullwidth" data-testid="button" type="submit">
-          Submit
-        </button>
+        </div>
+
+        <div className="field">
+          <label className="label">Email</label>
+          <div className="control has-icons-left has-icons-right">
+            <input
+              className="input is-danger"
+              type="email"
+              placeholder="Email input"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <span className="icon is-small is-left">
+              <i className="fas fa-envelope"></i>
+            </span>
+            <span className="icon is-small is-right">
+              <i className="fas fa-exclamation-triangle"></i>
+            </span>
+          </div>
+          <p className="help is-danger">This email is invalid</p>
+        </div>
+
+        <div className="field">
+          <label className="label">Subject</label>
+          <div className="control">
+            <textarea
+              className="textarea"
+              placeholder="Subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+        </div>
+
+        <div className="field">
+          <label className="label">Message</label>
+          <div className="control">
+            <textarea
+              className="textarea"
+              placeholder="This contact form doesn't work yet. If you have any questions or would like to contact me please reach out on LinkedIn or send me an email at blaulmax@gmail.com. Thanks and I hope to get back to you soon!"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+        </div>
+
+        <div className="field is-grouped">
+          <div className="control">
+            <button type="submit" className="button is-link">
+              Submit
+            </button>
+          </div>
+          <div className="control">
+            <button type="button" className="button is-link is-light">
+              Cancel
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );
 }
 
 export default Contact;
-

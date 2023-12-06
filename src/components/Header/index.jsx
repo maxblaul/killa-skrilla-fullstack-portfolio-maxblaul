@@ -26,7 +26,7 @@ function Header() {
   return (
     <div>
       <nav className='navbar'>
-        <div className='navbar-brand'>
+        <div className='navbar-brand '>
           <a
             className='navbar-item'
             rel='noopener noreferrer'  // Fix the rel attribute

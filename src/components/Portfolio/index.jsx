@@ -4,6 +4,7 @@ import WhatsInMyMeal from "../../public/Whats-in-my-meal.png";
 import MovieRater from "../../public/movie-rater.png";
 import NoteTaker from "../../public/note-taker.png";
 import DayScheduler from "../../public/day-scheduler.png"
+import JourneyLog from "../../public/journey-log.png"
 // import JourneyLog from "../../public/journey-log"
 
 const projects = [
@@ -36,10 +37,10 @@ const projects = [
     {
       id: 3,
       title: "Journey Log",
-      image: "",
-      description: "Coming Soon!",
+      image: JourneyLog,
+      description: "Journey Log lets you create an account, make a post about a past or upcoming trip, and comment on other users' posts about their trips. It uses REACT, MongoDb, Graphql, Bootstrap,Vite, jwt tokens, Express, @apollo/server and some native css.",
       repo: "https://github.com/lopezivan763/journey-log-2.0",
-      live: "",
+      live: "https://shielded-bastion-82364-5f4c4dcf0212.herokuapp.com/",
     },
     {
       id: 4,
